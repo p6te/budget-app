@@ -1,5 +1,6 @@
 import { Button, Stack } from "react-bootstrap";
-import Container from "react-bootstrap/Container"
+import BudgetCard from "./components/BudgetCard";
+import Container from "react-bootstrap/Container";
 
 function App() {
   return (
@@ -9,6 +10,16 @@ function App() {
         <Button variant="primary">Add Budget</Button>
         <Button variant="outline-primary">Add Expanse</Button>
       </Stack>
+      <div
+        style={{
+          display: "gird",
+          gridTemplateColumns: "repeat(auto-fill, minmax(300px,1fr)",
+          gap: "1rem",
+          alignItems: "flex-start",
+        }}
+      >
+        <BudgetCard name={"name"} amount={200} max={1000}  ></BudgetCard>
+      </div>
     </Container>
   );
 }
