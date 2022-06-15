@@ -3,6 +3,8 @@ import BudgetCard from "./components/BudgetCard";
 import Container from "react-bootstrap/Container";
 import AddBudgetModal from "./components/AddBudgetModal";
 import AddExpenseModal from "./components/AddExpenseModal";
+import UncategorizedBudgetCard from "./components/UncategorizedBudgetCard";
+import TotalBudgetCard from "./components/TotalBugetCard";
 import { useState } from "react";
 import { BudgetsProvider, useBudgets } from "./contexts/BudgetsContext";
 
@@ -28,7 +30,7 @@ function App() {
             Add Budget
           </Button>
           <Button variant="outline-primary" onClick={openAddExpenseModal}>
-           Add Expanse
+            Add Expanse
           </Button>
         </Stack>
         <div
@@ -54,6 +56,9 @@ function App() {
               />
             );
           })}
+
+          <UncategorizedBudgetCard />
+          <TotalBudgetCard />
         </div>
       </Container>
       <AddBudgetModal
