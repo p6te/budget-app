@@ -50,7 +50,7 @@ export default function BudgetCard({
               className="ms-auto"
               onClick={onAddExpenseClick}
             >
-              Add Expanse
+              Add Expense
             </Button>
             <Button onClick={onViewExpenseClick} variant="outline-secondary">View Expenses</Button>
           </Stack>
